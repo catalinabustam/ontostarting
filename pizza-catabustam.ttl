@@ -46,6 +46,11 @@ dcterms:description a owl:AnnotationProperty .
 
 :AnchovyPizza a owl:Class ;
     rdfs:label "anchovy pizza"@en ;
+    rdfs:comment """The word "AnchovyPizza" evokes a sensory experience of a savory and salty delight. It conjures up images of a perfectly cooked crust, golden brown and crispy on the edges, giving way to a rich and creamy sauce that's been infused with the pungency of fresh basil.
+
+The star of the show, however, is the anchovy - a salty, fishy delight that adds a depth of flavor and a hint of umami to the pizza. Thinly sliced and perfectly balanced, the anchovies dance across the surface of the pizza, leaving a trail of brininess in their wake.
+
+As the pizza is lifted to the lips, the aroma of melted mozzarella and the slight sweetness of the tomato sauce mingle with the savory scent of the anchovies, creating a mouthwatering bouquet that's impossible to resist. The first bite is a revelation - the crunch of the crust giving way to a tidal wave of flavors that washes over the palate, leaving a lasting impression of salty, savory goodness."""@en ;
     rdfs:subClassOf :Pizza ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :Pizza [ a owl:Restriction ;
@@ -58,6 +63,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :BakingDuration a owl:Class ;
     rdfs:label "baking duration"@en ;
+    rdfs:comment "\"Time spent in the oven\"."@en ;
     rdfs:subClassOf sulo:Duration ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( sulo:Duration [ a owl:Restriction ;
@@ -68,6 +74,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :BoxedPizza a owl:Class ;
     rdfs:label "boxed pizza"@en ;
+    rdfs:comment "A culinary creation, often served in a rectangular, paper or cardboard container."@en ;
     rdfs:subClassOf :Pizza ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :Pizza [ a owl:Restriction ;
@@ -76,6 +83,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :ExpressPizzaDelivery a owl:Class ;
     rdfs:label "express pizza delivery"@en ;
+    rdfs:comment "\"Convenient culinary convenience\"."@en ;
     rdfs:subClassOf :DeliveringThePizza ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :DeliveringThePizza [ a owl:Restriction ;
@@ -99,6 +107,13 @@ dcterms:description a owl:AnnotationProperty .
 
 :HotPepperPizza a owl:Class ;
     rdfs:label "hot pepper pizza"@en ;
+    rdfs:comment """The concept of HotPepperPizza is intricately tied to the process of crafting a delicious pie. It begins with the preparation of the dough, where yeast is activated to leaven the crust, giving it a light and airy texture. As the dough rises, it is then shaped into a perfect circle, awaiting the arrival of its signature topping - the HotPepper.
+
+This spicy addition is carefully sprinkled across the surface of the dough, adding a bold and adventurous flavor profile to the pizza. The aroma of toasted garlic and oregano wafts through the air, enticing the senses and building anticipation for the final product.
+
+Next, the sauce is spread evenly across the dough, providing a tangy and slightly sweet contrast to the spicy kick of the HotPepper. A blend of melted mozzarella and parmesan cheese is then added, binding the flavors together and creating a rich, velvety texture.
+
+As the pizza enters the oven, the crust browns to a golden perfection, while the sauce and cheese bubble and simmer, releasing a savory aroma that teases the taste buds. The final result is a HotPepperPizza that is both a feast for the eyes and a symphony of flavors on the palate."""@en ;
     rdfs:subClassOf :Pizza ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :Pizza [ a owl:Restriction ;
@@ -113,6 +128,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :KneadingTheDough a owl:Class ;
     rdfs:label "kneading the dough"@en ;
+    rdfs:comment "\"Shaping the foundation of a perfectly cooked crust.\""@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty sulo:hasParticipant ;
@@ -129,6 +145,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :PizzaRecipe a owl:Class ;
     rdfs:label "pizza recipe"@en ;
+    rdfs:comment "The word \"PizzaRecipe\" is a master plan."@en ;
     rdfs:subClassOf sulo:InformationObject ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( sulo:InformationObject [ a owl:Restriction ;
@@ -153,14 +170,21 @@ dcterms:description a owl:AnnotationProperty .
 
 :SaltyPizza a owl:Class ;
     rdfs:label "salty pizza"@en ;
+    rdfs:comment """SaltyPizza: A savory union of flavors and textures that embodies the essence of a perfectly baked pizza.
+
+As the dough emerges from the fiery oven, its golden crust glistens with a subtle sheen, inviting the senses to explore its crispy edges and soft center. The aroma of freshly baked crust wafts up, carrying the promise of a delicious creation.
+
+Next, the savory sauce is carefully spread, a rich and tangy foundation for the flavors to come. The sweetness of the tomato sauce is expertly balanced by the savory undertones of the cheese, a creamy and velvety delight that binds the dish together.
+
+The cheese, a blend of mozzarella, parmesan, and other artisanal favorites, is melted to perfection, its strings of melted goodness stretching and pulling as it's devoured. As the cheese hits the hot pan, it releases its signature aroma, a heady mix of umami and richness that teases the taste buds.
+
+The toppings, a colorful medley of meats, vegetables, and herbs, add a pop of freshness and flavor to the dish. The crunch of crispy bacon, the sweetness of caramelized onions, and the pungency of fresh basil all combine to create a symphony of tastes that will leave you wanting more.
+
+Finally, the finishing touches are applied: a drizzle of extra virgin olive oil, a sprinkle of sea salt, and a few grinds of freshly grated parmesan. The result is a culinary masterpiece, a SaltyPizza that is at once familiar and exciting, comforting and indulgent.
+
+This SaltyPizza is more than just a meal - it's an experience, a sensory delight that will leave you feeling satisfied, content, and eager for the next delicious bite."""@en ;
     rdfs:subClassOf :Pizza ;
     owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( :Pizza [ a owl:Restriction ;
-                        owl:onProperty sulo:hasDirectPart ;
-                        owl:someValuesFrom [ a owl:Restriction ;
-                                owl:onProperty sulo:hasFeature ;
-                                owl:someValuesFrom :HighSalt ] ] ) ],
-        [ a owl:Class ;
             owl:intersectionOf ( :Pizza [ a owl:Restriction ;
                         owl:onProperty sulo:hasPart ;
                         owl:someValuesFrom [ a owl:Restriction ;
@@ -170,10 +194,17 @@ dcterms:description a owl:AnnotationProperty .
                                                     owl:onProperty sulo:hasValue ;
                                                     owl:someValuesFrom [ a rdfs:Datatype ;
                                                             owl:onDatatype xsd:integer ;
-                                                            owl:withRestrictions ( [ xsd:minInclusive 1400 ] ) ] ] ) ] ] ] ) ] .
+                                                            owl:withRestrictions ( [ xsd:minInclusive 1400 ] ) ] ] ) ] ] ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( :Pizza [ a owl:Restriction ;
+                        owl:onProperty sulo:hasDirectPart ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:onProperty sulo:hasFeature ;
+                                owl:someValuesFrom :HighSalt ] ] ) ] .
 
 :SpicyPizzaOrder a owl:Class ;
     rdfs:label "order for spicy pizza"@en ;
+    rdfs:comment "A culinary term that perfectly encapsulates the bold flavors and sensations of a piping hot, aromatic pizza that ignites the senses."@en ;
     rdfs:subClassOf :Order ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :Order [ a owl:Restriction ;
@@ -209,10 +240,12 @@ dcterms:description a owl:AnnotationProperty .
 
 :BakersYeast a owl:Class ;
     rdfs:label "baker's yeast"@en ;
+    rdfs:comment "Essential ingredient."@en ;
     rdfs:subClassOf :FoodMaterial .
 
 :BoxingThePizza a owl:Class ;
     rdfs:label "boxing the pizza"@en ;
+    rdfs:comment "A playful name for a delicious treat."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
@@ -229,6 +262,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :CheeseMelting a owl:Class ;
     rdfs:label "cheese melting"@en ;
+    rdfs:comment "\"Velvety surrender\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
@@ -244,15 +278,20 @@ dcterms:description a owl:AnnotationProperty .
 
 :DeliveryTime a owl:Class ;
     rdfs:label "delivery time"@en ;
+    rdfs:comment "\"Wait Period\"."@en ;
     rdfs:subClassOf sulo:TimeInstant .
 
 :DenseTexture a owl:Class ;
     rdfs:label "dense texture"@en ;
+    rdfs:comment "\"Thick and chewy crust\"."@en ;
     rdfs:subClassOf :DoughTexture ;
     owl:disjointWith :AiryTexture .
 
 :DesaltedAnchovyPizza a owl:Class ;
     rdfs:label "desalted anchovy pizza"@en ;
+    rdfs:comment """Here's a short descriptive of the word "DesaltedAnchovyPizza" related to the process of a pizza:
+
+"DesaltedAnchovyPizza" is the term used to describe the final stage of pizza preparation where the anchovies have been carefully removed from the dough, allowing for a cleaner and more refined flavor profile. This step is crucial in creating a balanced taste experience, as the salty, fishy flavor of the anchovies is balanced by the sweetness of the tomato sauce and the tanginess of the melted mozzarella cheese. The desalted anchovy pizza is now ready to be baked to perfection, bringing all the flavors together in a harmonious union of savory delight."""@en ;
     rdfs:subClassOf :Pizza ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :Pizza [ a owl:Restriction ;
@@ -265,6 +304,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :DoughBaking a owl:Class ;
     rdfs:label "dough baking"@en ;
+    rdfs:comment "\"Artisanal blending of flour, water, and time.\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
@@ -276,6 +316,13 @@ dcterms:description a owl:AnnotationProperty .
 
 :Flour a owl:Class ;
     rdfs:label "flour"@en ;
+    rdfs:comment """The word "flour" takes on a vital role in the pizza-making process, serving as the foundation upon which the dough is crafted. It is the primary ingredient that, when combined with water, yeast, and other additives, gives the crust its structure and texture.
+
+As the mixture of flour and water is kneaded, the gluten strands begin to form, providing the dough with elasticity and resilience. The dough is then allowed to rise, giving the flour a chance to fully absorb the liquid ingredients and develop its complex flavor profile.
+
+As the dough is shaped and topped with ingredients, the flour becomes the base upon which the entire pizza is built. Its subtle sweetness and nutty undertones add depth and nuance to the finished product, complementing the savory flavors of the sauce, cheese, and various toppings.
+
+Throughout the cooking process, the flour undergoes a transformation, becoming crispy and golden on the outside, while remaining soft and slightly chewy on the inside. It is this delicate balance of texture and flavor that makes flour an essential component of the pizza-making process."""@en ;
     rdfs:subClassOf :FoodMaterial .
 
 :LowSalt a owl:Class ;
@@ -290,6 +337,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :Mixer a owl:Class ;
     rdfs:label "mixer"@en ;
+    rdfs:comment "\"Central component\""@en ;
     rdfs:subClassOf sulo:SpatialObject .
 
 :OliveOil a owl:Class ;
@@ -299,14 +347,17 @@ dcterms:description a owl:AnnotationProperty .
 
 :OrderIdentifier a owl:Class ;
     rdfs:label "order identifier"@en ;
+    rdfs:comment "\"Labeling component\""@en ;
     rdfs:subClassOf sulo:InformationObject .
 
 :OrderReceivedTime a owl:Class ;
     rdfs:label "order received time"@en ;
+    rdfs:comment "\"Confirmation of the pie's arrival\"."@en ;
     rdfs:subClassOf sulo:TimeInstant .
 
 :OrderingProcess a owl:Class ;
     rdfs:label "ordering process"@en ;
+    rdfs:comment "\"Step-by-Step Culinary Journey\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:precedes ;
             owl:someValuesFrom :MakingThePizzaDough ],
@@ -314,6 +365,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :PizzaOven a owl:Class ;
     rdfs:label "pizza oven"@en ;
+    rdfs:comment "\"Signature cooking vessel\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasFeature ;
             owl:someValuesFrom <https://w3id.org/ontostart/pro/ContainmentRole> ],
@@ -321,6 +373,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :PizzaSliceFreezing a owl:Class ;
     rdfs:label "pizza slice freezing"@en ;
+    rdfs:comment "\"Crystallizing the essence of a pizza.\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
@@ -331,26 +384,41 @@ dcterms:description a owl:AnnotationProperty .
 
 :PlacingPizzaOnTable a owl:Class ;
     rdfs:label "placing pizza on table"@en ;
+    rdfs:comment "The word \"PlacingPizzaOnTable\" is an Action."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty sulo:hasParticipant ;
-            owl:someValuesFrom [ a owl:Class ;
-                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/OnTopPositionRole> [ a owl:Restriction ;
-                                owl:onProperty sulo:isFeatureOf ;
-                                owl:someValuesFrom :Pizza ] ) ] ],
-        [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
                     owl:intersectionOf ( <https://w3id.org/ontostart/pro/SurfacePositionRole> [ a owl:Restriction ;
                                 owl:onProperty sulo:isFeatureOf ;
                                 owl:someValuesFrom :Table ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:hasParticipant ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/OnTopPositionRole> [ a owl:Restriction ;
+                                owl:onProperty sulo:isFeatureOf ;
+                                owl:someValuesFrom :Pizza ] ) ] ],
         sulo:Process .
 
 :Salt a owl:Class ;
     rdfs:label "salt"@en ;
+    rdfs:comment "\"Flavor Enhancer\""@en ;
     rdfs:subClassOf :FoodMaterial .
 
 :SpicySalamiPizza a owl:Class ;
     rdfs:label "spicy salami pizza"@en ;
+    rdfs:comment """The word "SpicySalamiPizza" evokes a sensory experience that combines the aroma, taste, and visual appeal of a freshly baked pizza. Here's a descriptive breakdown of the process involved in creating this mouthwatering dish:
+
+**Aroma**: As the pizza dough is being mixed and kneaded, a subtle scent of yeast and flour wafts through the air, hinting at the complexity of flavors to come. As the sauce is spread evenly, a tangy aroma of crushed tomatoes and herbs fills the air, tantalizing the senses.
+
+**Topping Preparation**: The spicy salami is sliced and arranged artfully on the pizza, its crispy edges and vibrant red color adding a pop of visual interest. The pungent aroma of salami wafts up, mingling with the savory scent of melted mozzarella cheese.
+
+**Assembly and Baking**: As the pizza is placed in the oven, the heat triggers a transformation, and the aroma of baking crust and melting cheese fills the air. The spicy salami and melted mozzarella mingle, releasing a savory, spicy fragrance that teases the taste buds.
+
+**Finishing Touches**: As the pizza emerges from the oven, golden and bubbly, the aroma of freshly baked crust and melted cheese fills the air. The spicy salami and fresh basil add a bright, herbaceous note, balancing the richness of the cheese and sauce.
+
+**Tasting**: The first bite is like a symphony of flavors and textures, with the spicy salami, tangy sauce, and creamy cheese harmonizing on the palate. The crispy crust provides a satisfying crunch, while the fresh basil adds a bright, refreshing note that leaves the senses singing.
+
+The word "SpicySalamiPizza" embodies the entire pizza-making process, from the initial aroma of dough and sauce to the final taste of a perfectly balanced, mouthwatering masterpiece."""@en ;
     rdfs:subClassOf :Pizza ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :Pizza [ a owl:Restriction ;
@@ -366,10 +434,14 @@ dcterms:description a owl:AnnotationProperty .
 
 :Sugar a owl:Class ;
     rdfs:label "sugar"@en ;
+    rdfs:comment """Here's a short descriptive of the word "Sugar" related to the process of making a pizza:
+
+In the context of pizza making, sugar refers to a key ingredient in the sauce that adds a sweet and tangy flavor to the pizza crust. As the dough rises, a small amount of sugar is added to the yeast, which helps to feed the yeast's growth and fermentation process. This results in a more complex flavor profile and a crisper crust. However, it's worth noting that traditional Neapolitan pizza recipes do not typically include sugar in the sauce."""@en ;
     rdfs:subClassOf :FoodMaterial .
 
 :UnboxingThePizza a owl:Class ;
     rdfs:label "unboxing the pizza"@en ;
+    rdfs:comment "Joyful unraveling."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
@@ -386,11 +458,15 @@ dcterms:description a owl:AnnotationProperty .
 
 :UnproofedDoughRole a owl:Class ;
     rdfs:label "unproofed dough role"@en ;
+    rdfs:comment "The role of the pizza dough being unproofed"@en ;
     rdfs:subClassOf sulo:Role ;
     owl:disjointWith :ProofedDoughRole .
 
 :Water a owl:Class ;
     rdfs:label "water"@en ;
+    rdfs:comment """What a unique combination! Here's a short description of the word "Water" related to the process of making a pizza:
+
+Water, in the context of pizza making, represents the liquid love that brings the dough to life. As the water is poured into the mixing bowl, it awakens the yeast, allowing the fermentation process to begin. The water then becomes the foundation of the dough, providing structure and moisture as it rises in the oven. Even after the pizza has emerged, the water plays a role in the crust's crispiness, as the steam it releases helps create the perfect golden-brown texture. In this sense, water is the unsung hero of the pizza-making process, bringing the perfect balance of moisture and texture to the finished product."""@en ;
     rdfs:subClassOf :FoodMaterial .
 
 :baking_event_001 a owl:NamedIndividual,
@@ -501,6 +577,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :AiryTexture a owl:Class ;
     rdfs:label "airy texture"@en ;
+    rdfs:comment "Delicate crumb structure."@en ;
     rdfs:subClassOf :DoughTexture .
 
 :AnchovyIngredient a owl:Class ;
@@ -523,18 +600,22 @@ dcterms:description a owl:AnnotationProperty .
 
 :BakerRole a owl:Class ;
     rdfs:label "baker role"@en ;
+    rdfs:comment "The BakerRole is the crust of the pizza."@en ;
     rdfs:subClassOf <https://w3id.org/ontostart/pro/AgentRole> .
 
 :BakingEndTime a owl:Class ;
     rdfs:label "baking end time"@en ;
+    rdfs:comment "The time when the baking process ends"@en ;
     rdfs:subClassOf sulo:EndTime .
 
 :BakingStartTime a owl:Class ;
     rdfs:label "baking start time"@en ;
+    rdfs:comment "The BakingStartTime refers to the moment when the pizza is placed in the oven, signaling the beginning of a crucial 10-15 minute window where the crust is transformed from soft and pliable to golden brown and crispy."@en ;
     rdfs:subClassOf sulo:StartTime .
 
 :DeliveryDuration a owl:Class ;
     rdfs:label "delivery duration"@en ;
+    rdfs:comment "\"Time from dough to doorstep\"."@en ;
     rdfs:subClassOf sulo:Duration .
 
 :DesaltedAnchovyIngredient a owl:Class ;
@@ -554,10 +635,16 @@ dcterms:description a owl:AnnotationProperty .
 
 :DoughTexture a owl:Class ;
     rdfs:label "dough texture"@en ;
+    rdfs:comment "Soft and airy."@en ;
     rdfs:subClassOf sulo:Quality .
 
 :HotPepper a owl:Class ;
     rdfs:label "hot pepper"@en ;
+    rdfs:comment """The word "HotPepper" evokes the spicy kick that adds a thrilling dimension to the art of pizza-making. As a pizza chef expertly sprinkles the fine powder of hot peppers onto the dough, the aroma of fiery heat wafts through the air, teasing the senses and building anticipation. The peppers, with their vibrant red hue, add a pop of color to the pie, as if to say, "This pizza is about to ignite your taste buds!"
+
+As the pizza is placed in the fiery oven, the hot peppers begin to surrender their potency, releasing a slow-building cascade of heat that simmers beneath the surface. The cheese, now melted and golden, becomes a gentle conduit for the pepper's fiery essence, harmonizing the spicy and savory notes in a delicious pas de deux.
+
+When the pizza emerges from the oven, the first bite transports the senses to a realm of sensory delight, as the hot pepper's sizzling essence dances on the palate, leaving a trail of warmth and wonder in its wake. It's a masterful blend of flavors and textures that redefines the pizza-making experience, leaving all who taste it begging for more of that tantalizing, tongue-tingling hot pepper magic."""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasFeature ;
             owl:someValuesFrom [ a owl:Class ;
@@ -583,10 +670,12 @@ dcterms:description a owl:AnnotationProperty .
 
 :MakingEndTime a owl:Class ;
     rdfs:label "making end time"@en ;
+    rdfs:comment "The time when the pizza making process ends"@en ;
     rdfs:subClassOf sulo:EndTime .
 
 :MakingStartTime a owl:Class ;
     rdfs:label "making start time"@en ;
+    rdfs:comment "\"A culinary turning point\""@en ;
     rdfs:subClassOf sulo:StartTime .
 
 :Milligram a owl:Class ;
@@ -596,11 +685,16 @@ dcterms:description a owl:AnnotationProperty .
 
 :Person a owl:Class ;
     rdfs:label "person"@en ;
+    rdfs:comment "The person is the \"Pizza Taker\"."@en ;
     rdfs:subClassOf sulo:SpatialObject .
 
 :PizzaMakingProcess a owl:Class ;
     rdfs:label "pizza making process"@en ;
+    rdfs:comment "The art of crafting a perfect pie."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sulo:hasPart ;
+            owl:someValuesFrom :SlicingThePizza ],
+        [ a owl:Restriction ;
             owl:onProperty sulo:hasPart ;
             owl:someValuesFrom [ a owl:Class ;
                     owl:intersectionOf ( :AssemblingThePizza [ a owl:Restriction ;
@@ -608,7 +702,10 @@ dcterms:description a owl:AnnotationProperty .
                                 owl:someValuesFrom :BakingThePizza ] ) ] ],
         [ a owl:Restriction ;
             owl:onProperty sulo:hasPart ;
-            owl:someValuesFrom :SlicingThePizza ],
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( :ProofingTheDough [ a owl:Restriction ;
+                                owl:onProperty sulo:precedes ;
+                                owl:someValuesFrom :AssemblingThePizza ] ) ] ],
         [ a owl:Restriction ;
             owl:onProperty sulo:hasPart ;
             owl:someValuesFrom [ a owl:Class ;
@@ -621,24 +718,21 @@ dcterms:description a owl:AnnotationProperty .
                     owl:intersectionOf ( :MakingThePizzaDough [ a owl:Restriction ;
                                 owl:onProperty sulo:precedes ;
                                 owl:someValuesFrom :ProofingTheDough ] ) ] ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:hasPart ;
-            owl:someValuesFrom [ a owl:Class ;
-                    owl:intersectionOf ( :ProofingTheDough [ a owl:Restriction ;
-                                owl:onProperty sulo:precedes ;
-                                owl:someValuesFrom :AssemblingThePizza ] ) ] ],
         sulo:Process .
 
 :PizzaSlice a owl:Class ;
     rdfs:label "pizza slice"@en ;
+    rdfs:comment "A perfect, curved segment of savory, cheesy goodness."@en ;
     rdfs:subClassOf :FoodMaterial .
 
 :ProofedDoughRole a owl:Class ;
     rdfs:label "proofed dough role"@en ;
+    rdfs:comment "The role of proofing the pizza dough"@en ;
     rdfs:subClassOf sulo:Role .
 
 :ProofingThePizzaDough_EndPhase a owl:Class ;
     rdfs:label "proofed dough role"@en ;
+    rdfs:comment "The final stage of perfecting the pizza dough."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty sulo:hasParticipant ;
@@ -655,6 +749,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :ProofingThePizzaDough_StartPhase a owl:Class ;
     rdfs:label "proofed dough role"@en ;
+    rdfs:comment "The final proofing stage of the pizza dough, where the dough has doubled in size and has taken on a light, airy texture, ready to be shaped and topped."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty sulo:hasParticipant ;
@@ -682,6 +777,9 @@ dcterms:description a owl:AnnotationProperty .
 
 :SpicyPizza a owl:Class ;
     rdfs:label "spicy pizza"@en ;
+    rdfs:comment """Here's a short descriptive of the word "SpicyPizza" related to the process of a pizza:
+
+"SpicyPizza" is a moment of culinary bliss when the aromatic essence of a freshly baked crust, the savory tang of melted mozzarella, and the bold zing of spicy sauce come together in perfect harmony. As the chef sprinkles a generous helping of fiery pepperoni slices and red pepper flakes across the surface, the room is filled with an irresistible aroma that teases the taste buds and builds anticipation. With the first slice lifted to the lips, the explosion of flavors - spicy, sweet, and savory - hits like a wave, leaving a trail of satisfied sighs and the promise of a perfectly cooked pie, carefully crafted to ignite the senses and leave a lasting impression."""@en ;
     rdfs:subClassOf :Pizza ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( :Pizza [ a owl:Restriction ;
@@ -748,27 +846,13 @@ dcterms:description a owl:AnnotationProperty .
 
 :AssemblingThePizza a owl:Class ;
     rdfs:label "assembling the pizza"@en ;
+    rdfs:comment "Crafting"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
                     owl:intersectionOf ( <https://w3id.org/ontostart/pro/PersistingRole> [ a owl:Restriction ;
                                 owl:onProperty sulo:isFeatureOf ;
-                                owl:someValuesFrom :PizzaDough ] ) ] ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:hasParticipant ;
-            owl:someValuesFrom [ a owl:Class ;
-                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/PersistingRole> [ a owl:Restriction ;
-                                owl:onProperty sulo:isFeatureOf ;
-                                owl:someValuesFrom :PizzaSauce ] ) ] ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:hasParticipant ;
-            owl:someValuesFrom [ a owl:Class ;
-                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/PersistingRole> [ a owl:Restriction ;
-                                owl:onProperty sulo:isFeatureOf ;
-                                owl:someValuesFrom owl:Thing ] ) ] ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:precedes ;
-            owl:someValuesFrom :BakingThePizza ],
+                                owl:someValuesFrom :Cheese ] ) ] ],
         [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
@@ -778,15 +862,30 @@ dcterms:description a owl:AnnotationProperty .
         [ a owl:Restriction ;
             owl:onProperty sulo:hasParticipant ;
             owl:someValuesFrom [ a owl:Class ;
-                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/PersistingRole> [ a owl:Restriction ;
-                                owl:onProperty sulo:isFeatureOf ;
-                                owl:someValuesFrom :Cheese ] ) ] ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:hasParticipant ;
-            owl:someValuesFrom [ a owl:Class ;
                     owl:intersectionOf ( :BakerRole [ a owl:Restriction ;
                                 owl:onProperty sulo:isFeatureOf ;
                                 owl:someValuesFrom :Person ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:hasParticipant ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/PersistingRole> [ a owl:Restriction ;
+                                owl:onProperty sulo:isFeatureOf ;
+                                owl:someValuesFrom :PizzaDough ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:precedes ;
+            owl:someValuesFrom :BakingThePizza ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:hasParticipant ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/PersistingRole> [ a owl:Restriction ;
+                                owl:onProperty sulo:isFeatureOf ;
+                                owl:someValuesFrom owl:Thing ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:hasParticipant ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( <https://w3id.org/ontostart/pro/PersistingRole> [ a owl:Restriction ;
+                                owl:onProperty sulo:isFeatureOf ;
+                                owl:someValuesFrom :PizzaSauce ] ) ] ],
         <https://w3id.org/ontostart/pro/TransformationProcess> .
 
 :HighSalt a owl:Class ;
@@ -796,7 +895,14 @@ dcterms:description a owl:AnnotationProperty .
 
 :MakingThePizzaDough a owl:Class ;
     rdfs:label "making the pizza dough"@en ;
-    rdfs:subClassOf [ a owl:Class ;
+    rdfs:comment "\"Crafting\""@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sulo:precedes ;
+            owl:someValuesFrom :ProofingTheDough ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:atTime ;
+            owl:someValuesFrom :MakingStartTime ],
+        [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty sulo:hasParticipant ;
                         owl:someValuesFrom [ a owl:Class ;
@@ -836,16 +942,11 @@ dcterms:description a owl:AnnotationProperty .
         [ a owl:Restriction ;
             owl:onProperty sulo:atTime ;
             owl:someValuesFrom :MakingEndTime ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:atTime ;
-            owl:someValuesFrom :MakingStartTime ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:precedes ;
-            owl:someValuesFrom :ProofingTheDough ],
         <https://w3id.org/ontostart/pro/TransformationProcess> .
 
 :Order a owl:Class ;
     rdfs:label "order"@en ;
+    rdfs:comment "\"Structural harmony\"."@en ;
     rdfs:subClassOf sulo:InformationObject .
 
 :PizzaCrust a owl:Class ;
@@ -859,10 +960,8 @@ dcterms:description a owl:AnnotationProperty .
 
 :ProofingTheDough a owl:Class ;
     rdfs:label "proofing the dough"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty sulo:precedes ;
-            owl:someValuesFrom :AssemblingThePizza ],
-        [ a owl:Class ;
+    rdfs:comment "\"Science of making perfect crust\""@en ;
+    rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty sulo:hasPart ;
                         owl:someValuesFrom [ a owl:Class ;
@@ -874,6 +973,9 @@ dcterms:description a owl:AnnotationProperty .
                                 owl:intersectionOf ( :ProofingThePizzaDough_EndPhase [ a owl:Restriction ;
                                             owl:onProperty sulo:isPrecededBy ;
                                             owl:someValuesFrom :ProofingThePizzaDough_StartPhase ] ) ] ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:precedes ;
+            owl:someValuesFrom :AssemblingThePizza ],
         <https://w3id.org/ontostart/pro/DevelopmentalProcess> .
 
 :Prosciutto a owl:Class ;
@@ -883,6 +985,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :SlicingThePizza a owl:Class ;
     rdfs:label "slicing the pizza"@en ;
+    rdfs:comment "\"Cutting into the pie.\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:precedes ;
             owl:someValuesFrom :DeliveringThePizza ],
@@ -905,6 +1008,17 @@ dcterms:description a owl:AnnotationProperty .
 
 :SodiumMeasurement a owl:Class ;
     rdfs:label "sodium measurement"@en ;
+    rdfs:comment """As the pizza dough rises in the warm oven, the sodium levels in the ingredients begin to take center stage. Sodium, a essential mineral, plays a crucial role in the process of making the perfect pizza.
+
+As the dough is tossed and stretched, the sodium content of the flour and water comes into play. The sodium ions help to strengthen the gluten network, giving the crust its characteristic chewiness and texture. The sodium also helps to break down the starches in the flour, creating a crispy crust that's both golden brown and crunchy.
+
+As the pizza sauce is spread evenly over the dough, the sodium content of the tomatoes and herbs kicks in. The sodium helps to balance out the acidity of the tomatoes, creating a rich and tangy flavor that complements the cheese and other toppings.
+
+But the sodium doesn't stop there. As the cheese is melted and bubbly, the sodium content of the milk and butter comes into play. The sodium helps to create a creamy and rich sauce that binds the cheese together, creating a velvety texture that's both indulgent and satisfying.
+
+Finally, as the pizza is removed from the oven and allowed to cool, the sodium levels in the crust and cheese continue to play a crucial role. The sodium helps to preserve the crust's crispiness, while also balancing out the flavors of the cheese and other toppings.
+
+In the end, the sodium measurement is a key factor in the process of making the perfect pizza. It's a delicate balance of minerals and flavors that come together to create a culinary masterpiece that's both delicious and satisfying."""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:refersTo ;
             owl:someValuesFrom :Saltiness ],
@@ -921,6 +1035,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :Table a owl:Class ;
     rdfs:label "table"@en ;
+    rdfs:comment "\"Surface where pizza is served\"."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasFeature ;
             owl:someValuesFrom <https://w3id.org/ontostart/pro/SurfacePositionRole> ],
@@ -932,18 +1047,19 @@ dcterms:description a owl:AnnotationProperty .
 
 :BakingThePizza a owl:Class ;
     rdfs:label "baking the pizza"@en ;
+    rdfs:comment "\"Art of crafting a perfectly cooked pie.\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty sulo:precedes ;
-            owl:someValuesFrom :SlicingThePizza ],
+            owl:onProperty sulo:hasPart ;
+            owl:someValuesFrom :CheeseMelting ],
         [ a owl:Restriction ;
             owl:onProperty sulo:hasPart ;
             owl:someValuesFrom :DoughBaking ],
         [ a owl:Restriction ;
-            owl:onProperty sulo:hasPart ;
-            owl:someValuesFrom :CheeseMelting ],
-        [ a owl:Restriction ;
             owl:onProperty sulo:atTime ;
             owl:someValuesFrom :BakingStartTime ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:precedes ;
+            owl:someValuesFrom :SlicingThePizza ],
         [ a owl:Restriction ;
             owl:onProperty sulo:atTime ;
             owl:someValuesFrom :BakingEndTime ],
@@ -951,6 +1067,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :DeliveringThePizza a owl:Class ;
     rdfs:label "delivering the pizza"@en ;
+    rdfs:comment "\"Bringing home the pie.\""@en ;
     rdfs:subClassOf sulo:Process .
 
 :Gorgonzola a owl:Class ;
@@ -980,6 +1097,19 @@ dcterms:description a owl:AnnotationProperty .
 
 :SpicinessMeasurement a owl:Class ;
     rdfs:label "spiciness measurement"@en ;
+    rdfs:comment """I must preface that the concept of measuring spiciness is more commonly associated with food, such as chili peppers or spicy sauces, rather than a pizza. However, I can attempt to create a descriptive passage related to the process of making a pizza, incorporating the idea of spiciness measurement:
+
+As the pizza dough is tossed and spun into a circular shape, the aroma of freshly baked crust wafts through the air, teasing the senses. The sauce, a rich and tangy blend of crushed tomatoes and herbs, is carefully spread evenly across the surface, providing a tangy foundation for the toppings to come.
+
+Next, the cheese, a blend of melted mozzarella and parmesan, is sprinkled liberally, adding a creamy texture and a burst of salty flavor. The toppings, a colorful medley of vegetables, meats, and spices, are added in a symphony of flavors and textures.
+
+As the pizza is slid into the oven, the heat transforms the ingredients, infusing the crust with a crispy crunch and the cheese with a golden-brown sheen. The aroma of melted mozzarella and baking bread fills the air, enticing the senses.
+
+But what of the spiciness? Ah, that's a different story altogether. The pizza maker has carefully considered the level of heat to add, a balance between savory and spicy that will leave the palate singing. A pinch of red pepper flakes adds a subtle kick, while a sprinkle of hot sauce provides an extra burst of flavor.
+
+And so, the pizza emerges from the oven, a culinary masterpiece that is both comforting and exhilarating. The crust is crispy, the cheese is melted, and the toppings are perfectly balanced. The spiciness, carefully calibrated to add depth and excitement, adds a final flourish to this gastronomic delight.
+
+In this case, the measurement of spiciness is not about assigning a numerical value, but rather about striking a balance between flavors and textures that will leave the palate dancing with joy."""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:refersTo ;
             owl:someValuesFrom :Spiciness ],
@@ -1001,6 +1131,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :PizzaDeliveryBox a owl:Class ;
     rdfs:label "pizza delivery box"@en ;
+    rdfs:comment "\"Carrying the pie to your door.\""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasFeature ;
             owl:someValuesFrom <https://w3id.org/ontostart/pro/ContainmentRole> ],
@@ -1026,6 +1157,7 @@ dcterms:description a owl:AnnotationProperty .
 
 :PizzaDough a owl:Class ;
     rdfs:label "pizza dough"@en ;
+    rdfs:comment "Tangy, yeast-leavened foundation."@en ;
     rdfs:subClassOf :FoodMaterial .
 
 :FoodMaterial a owl:Class ;
@@ -1040,32 +1172,32 @@ dcterms:description a owl:AnnotationProperty .
                     tomatoes or tomato sauce, cheese, and often various other ingredients (such as anchovies, mushrooms, onions, olives, 
                     vegetables, meat, etc.) baked at a high temperature."""^^xsd:string ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sulo:hasDirectPart ;
+            owl:someValuesFrom :PizzaSauce ],
+        [ a owl:Restriction ;
             owl:onClass :PizzaCrust ;
             owl:onProperty sulo:hasDirectPart ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:hasDirectPart ;
-            owl:someValuesFrom :PizzaSauce ],
         :FoodMaterial .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :LowSalt :MediumSalt :HighSalt ) .
-
-[] a owl:AllDifferent ;
-    owl:distinctMembers ( :pizza_001 :delivery_box_001 :crust_of_my_pizza :fridge_001 ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :SpicyHot :SpicyMedium :SpicyMild ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :SpicyHot :SpicyMedium :SpicyMild ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Mozzarella :Gorgonzola :Parmesan :PecorinoRomano :Prosciutto ) .
+    owl:members ( :PizzaOven :PizzaDeliveryBox :Table ) .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( :Mozzarella :Gorgonzola :Parmesan :PecorinoRomano ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :PizzaOven :PizzaDeliveryBox :Table ) .
+    owl:members ( :Mozzarella :Gorgonzola :Parmesan :PecorinoRomano :Prosciutto ) .
+
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( :pizza_001 :delivery_box_001 :crust_of_my_pizza :fridge_001 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :LowSalt :MediumSalt :HighSalt ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :SpicyHot :SpicyMedium :SpicyMild ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :SpicyHot :SpicyMedium :SpicyMild ) .
 
